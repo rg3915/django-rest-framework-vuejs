@@ -174,12 +174,13 @@ EOF
 Depois entre na pasta `core`:
 
 ```
-cd myproject/core/
+cd core/
 ```
 
 e vamos editar `views.py`:
 
 ```
+cat << EOF > views.py
 from django.contrib.auth.models import User
 from rest_framework import viewsets
 from .serializers import UserSerializer
@@ -187,10 +188,11 @@ from .serializers import UserSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     '''
-    Este viewset fornece automaticamente ações em `list` e `detail`.
+    Este viewset fornece automaticamente ações em 'list' e 'detail'.
     '''
     queryset = User.objects.all()
     serializer_class = UserSerializer
+EOF
 ```
 
 Ainda na pasta `core` vamos criar um `urls.py`:
@@ -241,6 +243,7 @@ EOF
 Vamos criar alguns usuários no Django, para isso vá para a pasta onde está o `manage.py` e digite:
 
 ```
+# pasta backend
 python manage.py shell_plus
 ```
 
@@ -377,11 +380,11 @@ cat << EOF > src/components/Users.vue
 
     data: () => ({
       users: [
-        { 'id': 1, 'username': 'Huguinho', 'url': 'huguinho.png' },
-        { 'id': 2, 'username': 'Zezinho', 'url': 'zezinho.png' },
-        { 'id': 3, 'username': 'Luizinho', 'url': 'luizinho.png' },
-        { 'id': 4, 'username': 'Tio Patinhas' },
-        { 'id': 5, 'username': 'Pato Donald' },
+        { 'id': 5, 'username': 'Huguinho', 'url': 'huguinho.png' },
+        { 'id': 6, 'username': 'Zezinho', 'url': 'zezinho.png' },
+        { 'id': 7, 'username': 'Luizinho', 'url': 'luizinho.png' },
+        { 'id': 8, 'username': 'Tio Patinhas' },
+        { 'id': 9, 'username': 'Pato Donald' },
       ]
     }),
     created() {
@@ -397,19 +400,57 @@ cat << EOF > src/components/Users.vue
 EOF
 ```
 
+#### Imagens
+
+Copie as imagens para o lugar correto.
+
+wget -O src/assets/huguinho.png https://raw.githubusercontent.com/rg3915/django-rest-framework-vuejs/master/img/huguinho.png
+wget -O src/assets/zezinho.png https://raw.githubusercontent.com/rg3915/django-rest-framework-vuejs/master/img/zezinho.png
+wget -O src/assets/luizinho.png https://raw.githubusercontent.com/rg3915/django-rest-framework-vuejs/master/img/luizinho.png
+
+
 Prontinho!!!
 
 
 ### Links:
 
-[Django Rest Framework Quickstart
-](http://pythonclub.com.br/django-rest-framework-quickstart.html)
+[Django Rest Framework Quickstart][6]
 
+[Django Rest Framework documentação][1]
 
+[django-cors-headers][3]
 
+[VueJS][2]
+
+[Vuetify][5]
+
+[Minicurso: Frontend em 2018 - um guia pra quem tá perdido com Tony Lâmpada][12]
+
+[Minicurso: Vue.JS - O basicão com Tony Lâmpada][13]
+
+[Construindo um front-end moderno com Vue.js - WorkWeb 2018 com Alefe Souza][7]
+
+[ComDevShow 2018 - #3 Construindo um front-end moderno com Vue.js com Alefe Souza][8]
+
+[[Gravação] Live streaming: Vue.js, Vuex e Mirage JS][9]
+
+[[parte 1/2] Vue, Vuex, Computed Properties e Getters][10]
+
+[Vue.js do jeito ninja][11]
+
+[Grupy-SP e VueJS-SP Crossover Out 2019][14]
 
 [1]: https://www.django-rest-framework.org/
 [2]: https://vuejs.org/
 [3]: https://pypi.org/project/django-cors-headers/
 [4]: https://gist.github.com/rg3915/6fad3d19f2b511ec5da40cef5a168ca5
 [5]: https://vuetifyjs.com/en/
+[6]: http://pythonclub.com.br/django-rest-framework-quickstart.html
+[7]: https://www.youtube.com/watch?v=UaaYVaEHo9w
+[8]: https://www.youtube.com/watch?v=3Po5Cw6cw98
+[9]: https://www.youtube.com/watch?v=17Ro7A3AqxU
+[10]: https://www.youtube.com/watch?v=d9GKdl3hxas
+[11]: https://www.youtube.com/watch?v=07-TvnH7XNo&list=PLcoYAcR89n-qq1vGRbaUiV6Q9puy0qigW
+[12]: https://www.youtube.com/watch?v=ZjgT8S65_pk&list=PLgMNBa0XaIgdFwU1I5Y89fAHdWMxY1ji6
+[13]: https://www.youtube.com/watch?v=zLCXSLTJNfw&list=PLgMNBa0XaIgdMt8edUbQmFnqL4g9ZgAxT
+[14]: https://www.youtube.com/playlist?list=PLs0UShRCaojIoUESSummFnigDE-ZiOKhB
