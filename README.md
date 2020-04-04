@@ -404,9 +404,11 @@ EOF
 
 Copie as imagens para o lugar correto.
 
+```
 wget -O src/assets/huguinho.png https://raw.githubusercontent.com/rg3915/django-rest-framework-vuejs/master/img/huguinho.png
 wget -O src/assets/zezinho.png https://raw.githubusercontent.com/rg3915/django-rest-framework-vuejs/master/img/zezinho.png
 wget -O src/assets/luizinho.png https://raw.githubusercontent.com/rg3915/django-rest-framework-vuejs/master/img/luizinho.png
+```
 
 
 Prontinho!!!
