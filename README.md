@@ -8,7 +8,7 @@ Django Rest Framework e VueJS desacoplados.
 ```
 mkdir backend
 cd backend
-pip install Django==2.1.12 \
+pip install Django==2.2.12 \
 djangorestframework \
 django-extensions \
 dj-database-url \
