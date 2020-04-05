@@ -434,11 +434,11 @@ Prontinho!!!
 
 [ComDevShow 2018 - #3 Construindo um front-end moderno com Vue.js com Alefe Souza][8]
 
-[[Gravação] Live streaming: Vue.js, Vuex e Mirage JS][9]
+[[Gravação] Live streaming: Vue.js, Vuex e Mirage JS com Fabio Vedovelli][9]
 
-[[parte 1/2] Vue, Vuex, Computed Properties e Getters][10]
+[[parte 1/2] Vue, Vuex, Computed Properties e Getters com Fabio Vedovelli][10]
 
-[Vue.js do jeito ninja][11]
+[Vue.js do jeito ninja com Tiago Matos][11]
 
 [Grupy-SP e VueJS-SP Crossover Out 2019][14]
 
